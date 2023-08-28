@@ -58,3 +58,14 @@ private/cache/retriever/catalog.xml
 /themesource/
 /userlib/
 /theme-cache/
+/*.launch
+/packages/
+/releases/
+/.mendix-cache/
+/.classpath
+/.project
+/adobesignconnector.mpr.bak
+/adobesignconnector.mpr.lock
+/**/node_modules/
+!/javascriptsource/**/node_modules/
+/nativemobile/builds/
