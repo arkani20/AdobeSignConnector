@@ -19,8 +19,6 @@
 *.mpr.right*
 /build/
 /deployment/
-/javasource/*/proxies/
-/javasource/system/
 /modeler-merge-marker
 /project-settings.user.json
 /theme/native/
@@ -31,6 +29,8 @@
 
 /javascriptsource/communitycommons
 /javascriptsource/nanoflowcommons
+/javasource/*/proxies/
+/javasource/system/
 /javasource/communitycommons/
 /javasource/encryption/
 /resources/
