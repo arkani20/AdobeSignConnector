@@ -55,9 +55,9 @@ Additionally, set the scopes you want to use with this application registration.
 ## Configuration
 
 1. Open the page with the configuration snippet (see last step of installation)
-2. Click on "New Authorization" and fill the creation form as follows:
-   - auth_uri: the URI of the authorization service (e.g. ```https://secure.eu1.adobesign.com```)
-   - token_uri: the URI of the API instance to be used (e.g. ```https://api.eu1.adobesign.com```)
+2. Click on "New Authorization" and fill the creation form as follows. [See below](#how-to-find-out-your-access-points) on how to find out what you access points are.
+   - web_access_point: the URI of the authorization service (e.g. ```https://secure.eu1.adobesign.com```)
+   - api_access_point: the URI of the API instance to be used (e.g. ```https://api.eu1.adobesign.com```)
    - response_type: currently only ```code``` is supported
    - client_id: the client id of your Adobe Sign application registration
    - client_secret: the secret id of your Adobe Sign application registration
@@ -71,6 +71,19 @@ After [preparation](#preparation), [installation](#installation) and [configurat
 
 I currently plan to develop another Module that builds on the Adobe Sign Connector and provides the most popular API calls in a much more convenient way. That module will of course then lack the genericity of this one.
    
+## How to find out your access points
+
+To find your access points you can make a request against the Adobe Sign API. To do so, follow these steps:
+
+1. Open the [Adobe Sign API Documentation](https://secure.adobesign.com/public/docs/restapi/v6#!/baseUris/getBaseUris)
+2. Scroll to the first operation which is ```GET /baseUris```
+3. Click on the ```OAUTH ACCESS-TOKEN``` Button on the right.
+4. A popup will open and ask you to select the scopes for the token. Select ```user_login``` here and click on the ```Authorize``` button.
+4. You will be redirected to Adobe in a new window. Just log in as you normally would and click on ```Allow Access``` afterwards.
+5. The window will close with the ```Authorization``` field of the operation now bein filled. Click on ```Try it out!```.
+6. There you go, your access points will be given as the response body.
+
+
 
 ## How to test your integration locally
 
