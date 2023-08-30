@@ -69,7 +69,7 @@ Additionally, set the scopes you want to use with this application registration.
 
 After [preparation](#preparation), [installation](#installation) and [configuration](#configuration) you can now use the ```DELETE```, ```GET```, ```POST_FILE```, ```POST_JSON``` and ```PUT``` Microflows of the Adobe Sign Connector Module by passing the required parameters to it. The provided API request functions expect (exported) JSON strings and return HttpResponse objects that still have to be imported in order to save them in objects. When using this module **without** any extensions, you are expected to make yourself familiar with the Adobe Sign API in order to pass the correct parameters and handle the responses correctly. Particularly, what you will have to do is to create the domain model objects as well as the import and export mappings that refer to the resources you want to use.  That additional effort is the drawback of the genericity of this module. 
 
-I currently plan to develop another Module that builds on the Adobe Sign Connector and provides the most popular API calls in a much more convenient way. That module will of course then lack the genericity of this one.
+I am currently working on another Module that builds up on the Adobe Sign Connector and provides the most popular API calls in a much more convenient way. That module does of course then lack the genericity of this one. A beta version of this module is accessible through its [Github repository](https://github.com/arkani20/AdobeSignCommons)
    
 ## How to find out your access points
 

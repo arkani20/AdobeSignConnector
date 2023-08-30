@@ -12,18 +12,13 @@
 .vscode
 /bin/
 
-*.mpk
 *.mpr.bak
 *.mpr.left*
 *.mpr.lock
 *.mpr.right*
 /build/
 /deployment/
-/modeler-merge-marker
 /project-settings.user.json
-/theme/native/
-/theme/web
-/themesource/
 /userlib/
 /theme-cache/
 
@@ -34,7 +29,6 @@
 /javasource/communitycommons/
 /javasource/encryption/
 /resources/
-/*.launch
 /packages/
 /releases/
 /.mendix-cache/
@@ -45,3 +39,5 @@
 /**/node_modules/
 !/javascriptsource/**/node_modules/
 /nativemobile/builds/
+/*.launch
+/modeler-merge-marker
