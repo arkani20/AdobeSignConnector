@@ -1,4 +1,4 @@
-# AdobeSignConnector
+# Adobe Sign Connector module for Mendix
 
 Adobe Acrobat Sign is a comprehensive electronic signature and digital document solution. It enables secure document sending, signing, tracking, and management, eliminating paper-based processes.
 
@@ -37,7 +37,7 @@ In order to use the Adobe Sign Connector you need access to the Adobe Acrobat Si
 
 [Create an application](https://opensource.adobe.com/acrobat-sign/developer_guide/gstarted.html) registration in the web UI and configure OAuth for that application. 
 
-Now, in the OAuth Settings of the application registration, set the Redirect URI to ```https://\[your-mendix-application-domain.com\]/adobesign/callback```. You can also configure multiple callback URIs if you want to use that particular application registration for multiple Mendix environments. Be aware though, that you can only add https-URIs and it is not possible to add ```http://localhost:8080/adobesign/callback```. [See below](#how-to-test-your-integration-locally) on how to test you integration locally anyway.
+Now, in the OAuth Settings of the application registration, set the Redirect URI to ```https://[your-mendix-application-domain.com]/adobesign/callback```. You can also configure multiple callback URIs if you want to use that particular application registration for multiple Mendix environments. Be aware though, that you can only add https-URIs and it is not possible to add ```http://localhost:8080/adobesign/callback```. [See below](#how-to-test-your-integration-locally) on how to test you integration locally anyway.
 
 Additionally, set the scopes you want to use with this application registration. Details can be found [here](https://opensource.adobe.com/acrobat-sign/developer_guide/gstarted.html).
 
@@ -87,7 +87,7 @@ To find your access points you can make a request against the Adobe Sign API. To
 
 ## How to test your integration locally
 
-If you want to test the integration locally, you might face the issue that Mendix locally runs on http, but you cannot add http-URIs as redirect URIs in your Adobe Sign application registrations OAuth configuration. For me, the easiest solution was to create a local NodeJS server that serves as a https proxy with a self-signed SSL certificate and redirects to your mendix runtime.
+If you want to test the integration locally, you might face the issue that Mendix locally runs on http, but you cannot add http-URIs as redirect URIs in your Adobe Sign application registrations OAuth configuration. For me, the easiest solution was to create a local NodeJS server that serves as a https proxy with a self-signed SSL certificate and redirects to your Mendix runtime.
 
 1. Create a self signed SSL certificate. You can use openssl in your terminal for that. The command below generates a certificate ```cert.pem``` and the respective key ```key.pem```.
 ```bash
