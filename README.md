@@ -56,8 +56,8 @@ Additionally, set the scopes you want to use with this application registration.
 
 1. Open the page with the configuration snippet (see last step of installation)
 2. Click on "New Authorization" and fill the creation form as follows. [See below](#how-to-find-out-your-access-points) on how to find out what you access points are.
-   - web_access_point: the URI of the authorization service (e.g. ```https://secure.eu1.adobesign.com```)
-   - api_access_point: the URI of the API instance to be used (e.g. ```https://api.eu1.adobesign.com```)
+   - web_access_point: the URI of the authorization service (e.g. ```https://secure.eu1.adobesign.com/```)
+   - api_access_point: the URI of the API instance to be used (e.g. ```https://api.eu1.adobesign.com/```)
    - response_type: currently only ```code``` is supported
    - client_id: the client id of your Adobe Sign application registration
    - client_secret: the secret id of your Adobe Sign application registration
