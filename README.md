@@ -56,11 +56,12 @@ Additionally, set the scopes you want to use with this application registration.
 
 1. Open the page with the configuration snippet (see last step of installation)
 2. Click on "New Authorization" and fill the creation form as follows. [See below](#how-to-find-out-your-access-points) on how to find out what you access points are.
-   - web_access_point: the URI of the authorization service (e.g. ```https://secure.eu1.adobesign.com/```)
-   - api_access_point: the URI of the API instance to be used (e.g. ```https://api.eu1.adobesign.com/```)
-   - response_type: currently only ```code``` is supported
+   - Name: the name of the authorization which can be chose arbitrarily
    - client_id: the client id of your Adobe Sign application registration
    - client_secret: the secret id of your Adobe Sign application registration
+   - response_type: currently only ```code``` is supported
+   - web_access_point: the URI of the authorization service (e.g. ```https://secure.eu1.adobesign.com/```)
+   - api_access_point: the URI of the API instance to be used (e.g. ```https://api.eu1.adobesign.com/```)
    - scopes: the scopes you want to use. Set them acoording to you Adobe Sign applications registration OAuth configuration.
 3. After saving the input, you can request access tokens via the button with the "open lock" icon. This will redirect you to Adobe Sign. If you configured both the application registration in the Adobe Sign web UI and the Authorization object correctly, you will be asked to confirm the autorization. After doing this, you will be redirected to you Mendix application.
 4. You might want to set the Authorization object you created as default using the "Mark as default" button. If you do so, you can use the ```RTR_AccessToken_Default``` Microflow from the Adobe Sign Connector Module to directly retrieve the current access token of the default authorization. However, is is possible to maintain and use multiple Authorizations simultaneously.
