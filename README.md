@@ -80,7 +80,7 @@ To find your access points you can make a request against the Adobe Sign API. To
 3. Click on the ```OAUTH ACCESS-TOKEN``` Button on the right.
 4. A popup will open and ask you to select the scopes for the token. Select ```user_login``` here and click on the ```Authorize``` button.
 4. You will be redirected to Adobe in a new window. Just log in as you normally would and click on ```Allow Access``` afterwards.
-5. The window will close with the ```Authorization``` field of the operation now bein filled. Click on ```Try it out!```.
+5. The window will close with the ```Authorization``` field of the operation now being filled. Click on ```Try it out!```.
 6. There you go, your access points will be given as the response body.
 
 
