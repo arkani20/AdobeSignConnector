@@ -46,13 +46,14 @@ Additionally, set the scopes you want to use with this application registration.
 ## Installation
 
 1. Install the Dependencies from the Mendix Marketplace:
+   - [Atlas Core](https://marketplace.mendix.com/link/component/117187)
    - [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
    - [Community Commons](https://marketplace.mendix.com/link/component/170)
    - [Encryption](https://marketplace.mendix.com/link/component/1011)
-2. Set the ```EncryptionKey``` constant of the Encryption module.
-3. Install the [Adobe Sign Connector](https://marketplace.mendix.com/link/component/215590) from the Mendix Marketplace
-4. Assign the module roles to your projects user roles. Administrator can configure the integrations, Users can use them.
-5. Add the ```SNPT_AdobeSign_Configuration``` Snippet to a page you can access. Alternatively you can use the ```AdobeSign_Configuration``` page.
+3. Set the ```EncryptionKey``` constant of the Encryption module.
+4. Install the [Adobe Sign Connector](https://marketplace.mendix.com/link/component/215590) from the Mendix Marketplace
+5. Assign the module roles to your projects user roles. Administrator can configure the integrations, Users can use them.
+6. Add the ```SNPT_AdobeSign_Configuration``` Snippet to a page you can access. Alternatively you can use the ```AdobeSign_Configuration``` page.
 
 ## Configuration
 
