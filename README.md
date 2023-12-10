@@ -49,7 +49,7 @@ Additionally, set the scopes you want to use with this application registration.
    - Encryption
 2. Set the EncryptionKey constant of the Encryption module.
 3. Install the Adobe Sign Connector from the Mendix Marketplace
-4. Assign the module roles to your projects user roles. Administrator can configure the integrations, Users can use them.
+4. Assign the module roles to your projects user roles. Administrators can configure the integrations, Users can use them.
 5. Add the SNPT_AdobeSign_Configuration Snippet to a page you can access. Alternatively you can use the AdobeSign_Configuration page.
 
 ## Configuration
@@ -68,9 +68,9 @@ Additionally, set the scopes you want to use with this application registration.
 
 ## Usage
 
-After [preparation](#preparation), [installation](#installation) and [configuration](#configuration) you can now use the ```DELETE```, ```GET```, ```POST_FILE```, ```POST_JSON``` and ```PUT``` Microflows of the Adobe Sign Connector Module by passing the required parameters to it. The provided API request functions expect (exported) JSON strings and return HttpResponse objects that still have to be imported in order to save them in objects. When using this module **without** any extensions, you are expected to make yourself familiar with the Adobe Sign API in order to pass the correct parameters and handle the responses correctly. Particularly, what you will have to do is to create the domain model objects as well as the import and export mappings that refer to the resources you want to use.  That additional effort is the drawback of the genericity of this module. 
+After [preparation](#preparation), [installation](#installation) and [configuration](#configuration) you can now use the ```DELETE```, ```GET```, ```POST_FILE```, ```POST_JSON``` and ```PUT``` microflows of the Adobe Sign Connector module by passing the required parameters to it. The provided API request functions expect (exported) JSON strings and return HttpResponse objects that still have to be imported in order to save them in objects. When using this module **without** any extensions, you are expected to make yourself familiar with the Adobe Sign API in order to pass the correct parameters and handle the responses correctly. Particularly, what you will have to do is to create the domain model objects as well as the import and export mappings that refer to the resources you want to use.  That additional effort is the drawback of the genericity of this module. 
 
-I am currently working on another Module that builds up on the Adobe Sign Connector and provides the most popular API calls in a much more convenient way. That module does of course then lack the genericity of this one. A beta version of this module is accessible through its [Github repository](https://github.com/arkani20/AdobeSignCommons)
+However, if that is too much effort for you and you don't need the genericity anyway, I've got you: I also built the [Adobe Sign Commons module](https://github.com/arkani20/AdobeSignCommons) which is an extension to his module and provides a much more convenient way to use some operations of the Adobe Sign API by providing some Import and Export Mappings as well as the respective Microflows. Note that the Adobe Sign Commons module lacks the genericity of this one but is probably the way to go if you only need some basic operations of the API. And still, if you need a less common operation that is not (yet) implemented by the Adobe Sign Commons module you can of course always fall back to the microflows of this module (which is a dependency of the Adobe Sign Commons module anyway).
    
 ## How to find out your access points
 
@@ -78,7 +78,7 @@ To find your access points you can make a request against the Adobe Sign API. To
 
 1. Open the [Adobe Sign API Documentation](https://secure.adobesign.com/public/docs/restapi/v6#!/baseUris/getBaseUris)
 2. Scroll to the first operation which is ```GET /baseUris```
-3. Click on the ```OAUTH ACCESS-TOKEN``` Button on the right.
+3. Click on the ```OAUTH ACCESS-TOKEN``` button on the right.
 4. A popup will open and ask you to select the scopes for the token. Select ```user_login``` here and click on the ```Authorize``` button.
 4. You will be redirected to Adobe in a new window. Just log in as you normally would and click on ```Allow Access``` afterwards.
 5. The window will close with the ```Authorization``` field of the operation now being filled. Click on ```Try it out!```.
@@ -95,7 +95,7 @@ If you want to test the integration locally, you might face the issue that Mendi
 # non-interactive and 10 years expiration
 openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName   /CN=CommonNameOrHostname"
 ```
-2. Create a ```server.js``` file and place the certificate and its key in a ```./ssl``` folder next to it. Not that the code below expects your Mendix runtime to be reached on ```http://localhost:8080/```.  If your Mendix runtime runs on a different port, adjust the code accordingly.
+2. Create a ```server.js``` file and place the certificate and its key in a ```./ssl``` folder next to it. Note that the code below expects your Mendix runtime to be reached on ```http://localhost:8080/```.  If your Mendix runtime runs on a different port, adjust the code accordingly.
 ```js
 let http = require("http");
 let httpProxy = require("http-proxy");
@@ -118,7 +118,7 @@ httpProxy
     })
     .listen(44383);
 ```
-3. Install the dependencies (e.g. using npm)
+3. Install the dependencies (e.g. using npm).
 4. Start the server using the command ```node server.js```.
 5. If you configured everything correctly and your Mendix app is running locally, you can reach it on ```https://localhost:44383/```.
 6. Add ```https://localhost:44383/``` to the Redirect URIs of the Adobe Sign application registration in the Adobe Sign web UI.
