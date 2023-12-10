@@ -15,9 +15,11 @@ Capabilities of the Adobe Acrobat Sign API:
 - Archive signed documents
 - Leverage enterprise workflows in Acrobat across any device
 
-## Adobe Acrobat Sign Connector advantage:
+## Adobe Acrobat Sign Connector advantage
 
 This Mendix connector for Adobe Acrobat Sign seamlessly integrates both platforms. It empowers Mendix apps with Adobe Sign's capabilities by providing a generic connector for the Adobe Acrobat Sign API that - due to its genericity - supports each API Operation supported by Adobe. You can visit the [Adobe Acrobat Sign API Documentation](https://secure.eu1.adobesign.com/public/docs/restapi/v6) to gain further information on its capabilities.
+
+Additionally, this module is designed to be used in combination with the [Adobe Sign Commons](https://github.com/gemdav/AdobeSignCommons) module which uses the generic microflows of this module and supports convenient to use plug-and-play microflows for the most important use cases of the Adobe Sign API.
 
 ## Typical usage scenario
 
@@ -25,7 +27,7 @@ For Mendix developers seeking to enhance their Mendix applications with automate
 
 ## Features
 
-- Authenticate users via their Adobe Sign acoount
+- Authenticate users via their Adobe Sign account
 - Access to all the features of the Adobe Sign API
 - Logging for all access attempts
 - CSRF protection
@@ -44,13 +46,14 @@ Additionally, set the scopes you want to use with this application registration.
 ## Installation
 
 1. Install the Dependencies from the Mendix Marketplace:
-   - Nanoflow Commons
-   - Community Commons
-   - Encryption
-2. Set the EncryptionKey constant of the Encryption module.
-3. Install the Adobe Sign Connector from the Mendix Marketplace
-4. Assign the module roles to your projects user roles. Administrators can configure the integrations, Users can use them.
-5. Add the SNPT_AdobeSign_Configuration Snippet to a page you can access. Alternatively you can use the AdobeSign_Configuration page.
+   - [Atlas Core](https://marketplace.mendix.com/link/component/117187)
+   - [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
+   - [Community Commons](https://marketplace.mendix.com/link/component/170)
+   - [Encryption](https://marketplace.mendix.com/link/component/1011)
+3. Set the ```EncryptionKey``` constant of the Encryption module.
+4. Install the [Adobe Sign Connector](https://marketplace.mendix.com/link/component/215590) from the Mendix Marketplace
+5. Assign the module roles to your projects user roles. Administrator can configure the integrations, Users can use them.
+6. Add the ```SNPT_AdobeSign_Configuration``` Snippet to a page you can access. Alternatively you can use the ```AdobeSign_Configuration``` page.
 
 ## Configuration
 
@@ -63,7 +66,7 @@ Additionally, set the scopes you want to use with this application registration.
    - web_access_point: the URI of the authorization service (e.g. ```https://secure.eu1.adobesign.com/```)
    - api_access_point: the URI of the API instance to be used (e.g. ```https://api.eu1.adobesign.com/```)
    - scopes: the scopes you want to use. Set them acoording to you Adobe Sign applications registration OAuth configuration.
-3. After saving the input, you can request access tokens via the button with the "open lock" icon. This will redirect you to Adobe Sign. If you configured both the application registration in the Adobe Sign web UI and the Authorization object correctly, you will be asked to confirm the autorization. After doing this, you will be redirected to you Mendix application.
+3. After saving the input, you can request access tokens via the button with the "open lock" (🔓) icon. This will redirect you to Adobe Sign. If you configured both the application registration in the Adobe Sign web UI and the Authorization object correctly, you will be asked to confirm the autorization. After doing this, you will be redirected to you Mendix application.
 4. You might want to set the Authorization object you created as default using the "Mark as default" button. If you do so, you can use the ```RTR_AccessToken_Default``` Microflow from the Adobe Sign Connector Module to directly retrieve the current access token of the default authorization. However, is is possible to maintain and use multiple Authorizations simultaneously.
 
 ## Usage
