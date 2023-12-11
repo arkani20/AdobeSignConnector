@@ -46,10 +46,10 @@ Additionally, set the scopes you want to use with this application registration.
 ## Installation
 
 1. Install the Dependencies from the Mendix Marketplace:
-   - [Atlas Core](https://marketplace.mendix.com/link/component/117187)
-   - [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
-   - [Community Commons](https://marketplace.mendix.com/link/component/170)
-   - [Encryption](https://marketplace.mendix.com/link/component/1011)
+    - [Atlas Core](https://marketplace.mendix.com/link/component/117187)
+    - [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
+    - [Community Commons](https://marketplace.mendix.com/link/component/170)
+    - [Encryption](https://marketplace.mendix.com/link/component/1011)
 3. Set the ```EncryptionKey``` constant of the Encryption module.
 4. Install the [Adobe Sign Connector](https://marketplace.mendix.com/link/component/215590) from the Mendix Marketplace
 5. Assign the module roles to your projects user roles. Administrator can configure the integrations, Users can use them.
