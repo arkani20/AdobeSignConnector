@@ -22,12 +22,8 @@
 /userlib/
 /theme-cache/
 
-/javascriptsource/communitycommons
-/javascriptsource/nanoflowcommons
 /javasource/*/proxies/
 /javasource/system/
-/javasource/communitycommons/
-/javasource/encryption/
 /resources/
 /packages/
 /releases/
